@@ -1,1 +1,1 @@
-# WebpackTemplate
+Webpack template
