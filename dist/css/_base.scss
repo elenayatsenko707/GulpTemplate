@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font: 300 16px/1.2 "Monserrat", Raleway, tahoma, verdana sans-serif;
+    color: $font-color;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+input {
+    outline: none;
+}
+img {
+    max-width: 100%;
+}
+.wrapper {
+    overflow: hidden;
+}
+.container{
+    
+}
