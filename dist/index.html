@@ -1,25 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
- 
 <head>
- 
 	<meta charset="UTF-8">
-	<title>Document</title>
- 
-	<!-- Подключаем стили проекта -->
+	<title>WaxomTemplate</title>
 	<link rel="stylesheet" href="css/app.min.css">
- 
 </head>
- 
 <body>
- 
-	<p>Далеко-далеко за словесными горами в стране, гласных и согласных...</p>
- 
-	<!-- Подключаем оптимизированное изображение -->
-	<img src="images/dest/image.jpg" alt="Alt">
- 
-	<!-- Подключаем скрипты проекта -->
+    <div class="wrapper">
+		<div class="header">
+			<div class="container">
+				<div class="header-inner">
+					<div class="logo">
+						<a href="#" class="logo__link">
+							<img class="logo__icon" src="./images/dest/logo.png" alt="logo">
+						</a>
+					</div>
+					<nav class="navigation">
+						<ul>
+							<li><a class="navigation__link" href="#">Home</a></li>
+							<li><a class="navigation__link" href="#">About Us</a></li>
+							<li><a class="navigation__link" href="#">Portfolio</a></li>
+							<li><a class="navigation__link" href="#">Features</a></li>
+							<li><a class="navigation__link" href="#">Blog</a></li>
+							<li><a class="navigation__link" href="#">Pricing</a></li>
+							<li><a class="navigation__link" href="#">Shortcodes</a></li>
+							<li><a class="navigation__link" href="#">Contact</a></li>
+						</ul>
+					</nav>
+					<div class="search">
+						<a href="#" class="search__link">
+							<img class="search__icon" src="./images/dest/icon-cart.png" alt="cart">
+						</a>
+						<a href="#" class="search__link">
+							<img class="search__icon" src="./images/dest/icon-search.png" alt="search">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="slider">
+			<div class="swiper-container main-slider">
+				<div class="swiper-wrapper">
+				  <div class="swiper-slide">
+						<div class="container">
+						   	<h1>Unique and Modern Design</h1>
+						   	<h2>Portfolio PSD Template</h2>
+						   	<p>Nam liber tempor cum soluta nobis eleifend option congue
+							  nihil imperdiet doming id quod mazim facer possim assum.
+							</p>
+							<a href="#" class="button">Get Started</a>
+						</div>
+					</div>
+				  <div class="swiper-slide">
+						<div class="container">
+							<h1>Unique and Modern Design</h1>
+							<h2>Portfolio PSD Template</h2>
+							<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+								tempor incididunt ut labore et dolore magna.
+							 </p>
+							 <a href="#" class="button">Get Started</a>
+				  		</div>
+					</div>
+				  <div class="swiper-slide">
+					  	<div class="container">
+							<h1>Unique and Modern Design</h1>
+						   	<h2>Portfolio PSD Template</h2>
+						   	<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								nisi ut aliquip ex ea commodo consequat nostrud.
+							</p>
+							<a href="#" class="button">Get Started</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination slider__pagination"></div>				
+				<div class="swiper-button-prev slider__prev"></div>
+				<div class="swiper-button-next slider__next"></div>
+			</div>
+		</section>
+	</div>
 	<script src="js/app.min.js"></script>
- 
 </body>
 </html>

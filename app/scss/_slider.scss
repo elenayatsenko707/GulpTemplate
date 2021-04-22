@@ -2,4 +2,63 @@
     min-height: 100vh;
     background: url(../images/dest/banner.png) no-repeat 100% 0%;
     background-size: cover;
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        padding: 375px 0;
+        width: 600px;
+        color:$font_color;
+        h1 {
+            font-size: 36px;
+            font-weight: 500;
+        }
+        h2 {
+            font-size: 50px;
+            padding-bottom: 17px;          
+        }
+        p {
+            font-size: 17px;
+            padding: 0 280px;
+            text-align: center;
+            padding-bottom: 66px;
+        }      
+        .button {
+            font-size: 16px;
+            text-transform: uppercase;
+            color:$font_color;
+            padding: 18px 31px;
+            border-radius: 7px;
+            background: #998675;
+            box-shadow: 0px 3px 2px 0px rgba(115, 99, 87, 1);
+        }
+    }
+    &__prev {
+        top: 51%;
+        left: 150px;
+        color: #a2a19f; 
+    }
+    &__next {
+        top: 50%;
+        right: 150px;
+        color: #a2a19f;   
+    }
+    &__pagination {
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background: #a2a19f;
+            opacity: .5;
+                &.swiper-pagination-bullet-active {
+                    background: rgba(255, 255, 255, 0.1);
+                    border: solid 2px #fff;      
+
+                }
+        }
+
+    }   
 }
+:root {
+    --swiper-navigation-size:75px;
+} 
