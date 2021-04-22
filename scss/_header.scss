@@ -3,23 +3,27 @@
     width: 100%;
     top: 40px;
     left: 0px;
-    & .container { 
+    right: 0;
+    &-inner { 
         display: flex; 
         justify-content: space-between;
         align-items: center;
     }
 }
 .navigation {
-    padding-left: 130px;
-    &__item {
-        font-size: 16px;
-        font-family: 'Monserrat' sans-serif;
-        font-weight: 300;
-        color: #fff;
-        margin-left: 27px;
-        &:hover {
-            color: #c7b299;
-        }
+	padding-left: 130px;
+	ul {
+		display: flex;
+	}
+	li {
+		padding-right: 27px;
+	}
+    &__link {
+	    color:$font_color;
+	    font-size: 16px;
+            &:hover {
+	            color:$activ_color;
+            }
     }
 }
 .search {
