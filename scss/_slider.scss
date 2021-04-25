@@ -9,7 +9,7 @@
         text-align: center;
         padding: 375px 0;
         width: 600px;
-        color:$font_color;
+        color:$white;
         h1 {
             font-size: 36px;
             font-weight: 500;
@@ -27,7 +27,7 @@
         .button {
             font-size: 16px;
             text-transform: uppercase;
-            color:$font_color;
+            color:$white;
             padding: 18px 31px;
             border-radius: 7px;
             background: #998675;
@@ -44,6 +44,10 @@
         right: 150px;
         color: #a2a19f;   
     }
+    .swiper-button-next::after,
+    .swiper-button-prev::after{
+        font-size: 75px;
+    }
     &__pagination {
         .swiper-pagination-bullet {
             width: 10px;
@@ -59,6 +63,4 @@
 
     }   
 }
-:root {
-    --swiper-navigation-size:75px;
-} 
+
