@@ -1,0 +1,135 @@
+.project_post {
+    & .title-30 {
+        padding-top: 70px;
+        margin: 0 0 20px;
+    }
+    & .text {
+        font-size: 14px;
+        line-height: 24px;  
+    }
+    .slider__post {
+        & .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; 
+            margin-bottom: 40px;
+            & .post__item {
+                width: calc(33.3% - 30px);
+                flex-shrink: 0;
+                max-width: 370px;
+                max-height: 400px;
+                margin-bottom: 40px;
+                position: relative;
+                & .post__img {
+                    & img {
+                        max-width: 370px;
+                        max-height: 220px;
+                        width: 100%;  
+                        height: fit-content;
+                        display: block;                           
+                    }
+                    & .post__data {
+                        position: absolute;
+                        color: $white;
+                        margin: 20px;
+                        & h6 {
+                            font-size: 24px;
+                            padding: 3px 10px 7px;   
+                            background: #363636;
+                            border-radius: 7px 7px 0px 0px;
+                        }
+                        & p {
+                            font-size: 11px;
+                            padding: 7px 10px 5px;
+                            background: #252525;
+                            border-radius: 0px 0px 7px 7px;
+                            text-align: center;
+                        }
+                    } 
+                }       
+                & .post__inner {
+                    padding: 30px 30px 20px;
+                    & .post__title {
+                        color: $dark;
+                        font-size: 20px;
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: 500;
+                        padding-bottom: 20px;    
+                    }
+                    & .post__text {
+                        color: $font_color;
+                        font-size: 16px;
+                        font-family: 'Montserrat', sans-serif;
+                        padding-bottom: 30px; 
+                        width: 330px;
+                    }
+                    & .button {
+                        color: $brown;
+                        border: 0;
+                        background: $white;
+                    }
+                } 
+                &:hover {
+                    background-color: $dark_bg;
+                    opacity: 1;
+                    position: relative;
+                    .post__img { 
+                        opacity: 0.7;
+                    }
+                    .post__data {
+                        position: absolute;
+                        color: $white;
+                        & h6 {  
+                            background: $brown;
+                        }
+                        & p {
+                            background: #a48d72;
+                        }
+                    }
+                    .post__inner {
+                        background-color: $dark_bg;
+                        .post__title {
+                            color: $brown;
+                        }
+                        .post__text {
+                            color: $white;
+                        }
+                        .button {
+                            background: $dark_bg;
+                        }
+                    }   
+                }
+            }   
+        }
+        .slider__prev {
+            top: 95%;
+            left: 590px;
+            border: 2px solid #d1d1d1;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            &:hover {
+                border: 2px solid $brown;
+                color: $brown;
+            }
+        }
+        .slider__next {
+            top: 95%;
+            right: 540px;
+            border: 2px solid #d1d1d1;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            &:hover {
+                color: $brown;
+                border: 2px solid $brown;  
+            }
+        }
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 11px;
+        }
+    }
+}
+
+

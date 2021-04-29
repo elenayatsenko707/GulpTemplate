@@ -1,0 +1,42 @@
+.features {
+    background-color: $gray_bg;
+    .container__features {
+        max-width: 1180px;
+        padding: 0 15px 0 50px;
+        margin: 0 auto;
+    }
+    & .row {
+        display: flex;       
+        .features__img {
+            width: 40%;
+            height: 100%;
+            & img {
+                padding-top: 80px;
+            }
+        }
+        .col--60 {
+            width: 60%;
+            padding-top: 185px;
+            h3 {
+                font-size: 29px;
+                font-weight: 500;
+                padding-bottom: 30px;
+                color: $dark;  
+            }
+            p {
+                font-size: 16px;
+                text-align: left;
+                padding-bottom: 30px;
+                line-height: 28px;
+            }
+            ul {
+                padding-left: 85px;
+                line-height: 32px;
+                list-style: url(../images/dest/icons/arrow01.png);
+                & li {
+                    padding-left: 25px;
+                }  
+            }
+        }        
+    }
+}
