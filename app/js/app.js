@@ -2,9 +2,9 @@ $(document).ready(function() {
 
     const swiper = new Swiper('.main-slider', {
         loop: true,
-        // autoplay: {
-        //     // delay: 3000,
-        // },
+        autoplay: {
+            delay: 3000,
+        },
         // If we need pagination
         pagination: {
             el: '.swiper-pagination',
