@@ -1,0 +1,16 @@
+.partners {
+    margin-top: 65px;
+    background: url(../images/dest/banner03.jpg) no-repeat 100% 0%;
+    background-size: cover;
+    .container {
+        max-width: 1170px;
+        padding: 0 15px;
+        margin: 0 auto;
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 140px 0;
+        }
+    }
+}

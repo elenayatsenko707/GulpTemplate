@@ -20,6 +20,7 @@
                 }
                 a {
                     color: $font_color;
+                    outline: none;
                     .ui-tabs-anchor {
                         color: $white;
                         padding: 4px 18px;
@@ -45,6 +46,7 @@
                             max-height: 240px;
                             width: 100%;  
                             height: fit-content;
+                            display: block;
                         }                            
                         .projects__icon {
                             display: none;
@@ -56,7 +58,7 @@
                         &:after {
                             content: '';
                             position: relative;
-                            top: -105px;
+                            top: -100px;
                             border: 17px solid transparent;
                             border-bottom: 10px solid $gray_bg;
                         }     
@@ -74,7 +76,7 @@
                     } 
                     &:hover {
                         position: relative;
-                        background-color: #362f2d;
+                        background-color: $dark_bg;
                         opacity: 1;
                         
                         .projects__img { 
@@ -92,13 +94,13 @@
                             }
                         }
                         .projects__inner {
-                            background-color: #362f2d;
+                            background-color: $dark_bg;
                             &:after {
                                 content: '';
                                 position: relative;
-                                top: -105px;
+                                top: -100px;
                                 border: 17px solid transparent;
-                                border-bottom: 10px solid #362f2d;
+                                border-bottom: 10px solid $dark_bg;
                             }    
                             .projects__title {
                                 color: #d1d1d1;

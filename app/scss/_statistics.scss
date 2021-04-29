@@ -1,0 +1,40 @@
+.statistics {
+    background: rgb(33,27,25);
+    background: linear-gradient(90deg, rgba(33,27,25,1) 0%, rgba(56,40,32,1) 50%, rgba(78,52,39,1) 100%);
+    margin-top: -3px;
+    & .container {
+        max-width: 960px;
+        padding: 0 15px;
+        margin: 0 auto;
+        & .row {
+        flex-wrap: nowrap;
+        text-align: center;
+        padding: 63px 0 60px;
+            & .col--20 {
+                position: relative;
+                & .number {
+                    font-size: 48px;
+                    color: $white;
+                    padding: 14px 0 9px;
+                }
+                & p {
+                    color: $brown;
+                    font-size: 14px;
+                    padding-bottom: 30px;
+                    text-transform: uppercase;    
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 30px;
+                    height: 2px;
+                    background: $white;
+                    left: calc(50% - 14px);
+                    -webkit-transition: .3s;
+                    -o-transition: .3s;
+                    transition: .3s;
+                }
+            }
+        }
+    }  
+}
