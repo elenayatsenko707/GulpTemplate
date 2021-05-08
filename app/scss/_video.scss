@@ -1,6 +1,7 @@
 .video {
     position: relative;
     text-align: center;
+    line-height: 0;
     video {
         object-fit: cover;
     }
@@ -11,6 +12,7 @@
         font-weight: 400;
     }
     &__content {
+        line-height: 1.2;
         position: absolute;
         left: 0;
         top: 0;

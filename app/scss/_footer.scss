@@ -1,0 +1,168 @@
+.footer {
+    font-weight: 300;
+    color: $dark;
+    &__top {
+        padding: 80px 0 75px;
+        background: #191919;
+        font-size: 14px;
+        .col--25 {
+            &:not(:first-child) {
+                padding-top: 23px;
+            }
+            .footer__text {
+                padding: 20px 21px 0 0;
+                line-height: 24px; 
+                a {
+                color: $white;
+                }
+            }
+            .recent__posts {
+                &:not(:last-child) {
+                    border-bottom: 1px solid #252525;
+                }
+                &:not(:first-child) {
+                    margin-top: 20px;
+                }
+                .recent__data {
+                    color: #363636;
+                    font-family: 'Montserrat';
+                    font-size: 12px;
+                    padding-bottom: 10px;      
+                }
+                .recent__text {
+                    color: $dark;
+                    font-family: 'Montserrat';
+                    font-size: 14px;
+                    padding-bottom: 17px;
+                    line-height: 23px;
+                }
+                &:hover {
+                    .recent__data {
+                        color: $white;
+                    }
+                    .recent__text {
+                        color: $brown;
+                    }
+                }
+            }
+            .twitter__posts {
+                &:not(:last-child) {
+                    border-bottom: 1px solid #252525;
+                }
+                &:not(:first-child) {
+                    margin-top: 20px;
+                }  
+                .twitter__text {
+                    color: $dark;
+                    font-family: 'Montserrat';
+                    font-size: 14px;
+                    padding-bottom: 5px;
+                    line-height: 23px;
+                    a {
+                        color: #02b4e4;
+                        &:active {
+                            vertical-align: middle;
+                            color: #959595;
+                        }
+                        &:focus {
+                            vertical-align: middle;
+                            color: #959595;
+                        }
+                    }
+                }
+                .twitter__time {
+                    color: #363636;
+                    font-family: 'Montserrat';
+                    font-size: 12px;
+                    padding-bottom: 22px;      
+                }
+            }
+        }
+    }
+    &__bottom {
+        padding: 46px 0 50px;
+        background: #111;
+        font-size: 13px;
+
+        @include media(720) {
+            padding: 15px 0 18px;
+        }
+
+        .container {
+            @extend .row;
+            
+            @include media(720) {
+                display: block;
+                text-align: center;
+            }
+        }
+        &--left {
+            li {
+                &:first-child {
+                    padding-left: 0;
+                    position: relative;
+                }
+                &:not(:first-child):hover {
+                    color: $brown;
+                }
+            }
+        }
+        &--right {
+            li {
+                &:first-child {
+                    padding-right: 10px;
+                }
+            }
+        }    
+        ul {
+            display: flex;
+            align-items: center;
+
+            @include media(720) {
+                justify-content: center;
+                padding: 5px 0;
+            }
+            li {
+                padding: 0 10px;
+                position: relative;
+                & + li {
+                    &:before{
+                        content: '';
+                        width: 1px;
+                        height: 14px;
+                        position: absolute;
+                        left: 0;
+                        top: calc(50% - 7px);
+                        background: $dark;
+                        opacity: .5;
+                    }
+                }
+            }
+            a {
+                transition: .2s;
+                color: $dark;
+                &:hover {
+                    color: $brown;
+                }
+                &.white {
+                    color: $white;
+                }
+            }
+        }
+    }
+    .dribble {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__item{
+            width: calc(50% - 5px);
+            margin: 0 0 10px;
+            line-height: 0;
+            img {
+                width: 100%;
+                max-height: 93px;
+                max-width: 141px;
+            }
+        }
+    }
+}
