@@ -12,8 +12,17 @@
             .footer__text {
                 padding: 20px 21px 0 0;
                 line-height: 24px; 
-                a {
-                color: $white;
+                & .button {
+                    color: $white;
+                    border: 0;
+                    background: #191919;
+                    font-family: 'Montserrat';
+                    font-size: 14px;
+                    .arrow {
+                        border: 5px solid transparent;
+                        border-left-color: $white;
+                        display: inline-block;
+                    }
                 }
             }
             .recent__posts {

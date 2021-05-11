@@ -61,5 +61,15 @@
                 }
             }
         }
+        @include media(720) { 
+            width: calc(80% - 15px);
+        }
+    }
+    @include media(720) {
+        padding: 26px 0 40px;
+        .row {
+           flex-direction: column; 
+           align-items: center;
+        }  
     }
 }

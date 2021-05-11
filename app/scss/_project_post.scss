@@ -52,14 +52,14 @@
                     & .post__title {
                         color: $dark;
                         font-size: 20px;
-                        font-family: 'Raleway', sans-serif;
+                        font-family: 'Raleway';
                         font-weight: 500;
                         padding-bottom: 20px;    
                     }
                     & .post__text {
                         color: $font_color;
                         font-size: 16px;
-                        font-family: 'Montserrat', sans-serif;
+                        font-family: 'Montserrat';
                         padding-bottom: 30px; 
                         width: 330px;
                     }
@@ -67,6 +67,13 @@
                         color: $brown;
                         border: 0;
                         background: $white;
+                        font-family: 'Montserrat';
+                        font-size: 14px;
+                        .arrow {
+                            border: 5px solid transparent;
+                            border-left-color: $brown;
+                            display: inline-block;
+                        }
                     }
                 } 
                 &:hover {
