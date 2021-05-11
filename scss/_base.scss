@@ -66,6 +66,10 @@ table {
         color: $white;
         font-weight: 500;
     }
+    @include media(720) { 
+        font-size: 23px;
+        margin: 0 0 15px;
+    }
 }
 .text {
     text-align: center;
@@ -80,6 +84,9 @@ table {
         text-align: left;
         max-width: 670px;
     }
+    @include media(720){
+      margin: 0 auto 15px;  
+    } 
 }
 
     
