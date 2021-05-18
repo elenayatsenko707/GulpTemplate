@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body {
-    font: 300 16px/1.2 'Montserrat', 'Raleway', verdana, sans-serif;
+    font: 300 16px/1.2 'Montserrat', "Raleway",tahoma ,verdana,sans-serif;
 	color:$font_color;
 }
 a {
@@ -50,6 +50,9 @@ table {
     font-family: 'Raleway','Monserrat', sans-serif;
     color: $white;
     margin: 0 0 25px;
+    @include media(480) { 
+        margin: 0;
+    }
 }
 .title-30 {
     font-size: 30px;

@@ -2,6 +2,9 @@
     margin-top: 65px;
     background: url(../images/dest/banner03.jpg) no-repeat 100% 0%;
     background-size: cover;
+    @include media(950) {
+        display: none;
+    }
     .container {
         max-width: 1170px;
         padding: 0 15px;

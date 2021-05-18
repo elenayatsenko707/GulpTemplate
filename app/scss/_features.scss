@@ -4,19 +4,34 @@
         max-width: 1180px;
         padding: 0 15px 0 50px;
         margin: 0 auto;
+        @include media(600) {
+            padding: 0 15px;
+        }  
     }
     & .row {
-        display: flex;       
+        display: flex;
+        @include media(600) {
+            flex-direction: column;
+        }      
         .features__img {
             width: 40%;
             height: 100%;
             & img {
                 padding-top: 80px;
+                @include media(1020) {
+                    padding-top: 30px;
+                }
+                @include media(800) {
+                    display: none;
+                }
             }
         }
         .col--60 {
             width: 60%;
             padding-top: 185px;
+            @include media(800) {
+                width: 100%;
+            }
             h3 {
                 font-size: 29px;
                 font-weight: 500;
@@ -39,8 +54,26 @@
                         background-color: $brown;
                         margin-right: 30px;
                         padding: 3px 9px;
+                        @include media(1200) {
+                            margin-right: 10px;
+                        } 
                     }
+                }
+                @include media(1200) {
+                    padding: 0 0 20px 0;
+                    line-height: 28px;
                 }  
+            }
+            @include media(1200) {
+                padding-top: 30px;
+                h3 {
+                    padding-bottom: 10px;
+                    font-size: 23px;
+                }
+                p {
+                    padding-bottom: 10px;
+                    line-height: 23px;
+                }
             }
         }        
     }

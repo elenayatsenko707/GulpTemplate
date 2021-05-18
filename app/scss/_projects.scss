@@ -1,35 +1,63 @@
 .projects {
     padding: 75px 0 80px;
+    @include media(800) {
+        padding: 20px 0 60px;
+    }
     &__tabs {
         .tabs__caption {
             display:flex;
             align-items: center;
             justify-content: center;
+            @include media(800) {
+                flex-wrap: wrap;
+            }
+            @include media(480) {
+                flex-direction: column;
+            }
+           
             & li {
                 font-size: 17px;
                 cursor: pointer;
                 border: 1px solid #ededed;
                 border-radius: 5px;
                 margin: 0 5px;
+                @include media(800) {
+                    margin: 5px;
+                }
+                @include media(480) {
+                    width: 100%;
+                    display: grid;
+                    margin: 0;
+                }
                 &.ui-tabs-active {
                     background: $brown_bg;
                     padding: 0 10px;
+                    margin: 0;
                     & a {
-                        color: $white;
+                        color: $white; 
                     }
                 }
                 a {
                     color: $font_color;
                     outline: none;
+                    @include media(480) {
+                        text-align: center;
+                    }
                     .ui-tabs-anchor {
                         color: $white;
                         padding: 4px 18px;
+                        @include media(480) {
+                            text-align: center;
+                        }
                     }
                 }     
             }      
         }
         #tabs-1 {
             padding-top: 40px;
+            @include media(480) {
+                padding-top: 15px;
+            }
             & .row {
                 display: flex;
                 flex-wrap: wrap;
@@ -40,33 +68,46 @@
                     max-width: 370px;
                     max-height: 340px;
                     margin-bottom: 40px;
-                    & .projects__img {
-                        & img {
-                            max-width: 370px;
-                            max-height: 240px;
-                            width: 100%;  
-                            height: fit-content;
-                            display: block;
-                        }                            
-                        .projects__icon {
-                            display: none;
-                        }
+                    @include media(800) {
+                        width: calc(50% - 30px);
+                        margin-bottom: 15px;
+                    }
+                    @include media(480) {
+                        width: 100%;
+                    }
+                    & .projects__img img{
+                        max-width: 370px;
+                        max-height: 240px;
+                        width: 100%;  
+                        height: fit-content;
+                        display: block;                          
                     }     
                     & .projects__inner {
                         padding: 30px 30px 20px;
                         background: $gray_bg;
-                        &:after {
+                        position: relative;
+                        @include media(800) {
+                            padding: 10px 20px 10px;
+                        }
+                        &:before {
                             content: '';
-                            position: relative;
-                            top: -100px;
-                            border: 17px solid transparent;
-                            border-bottom: 10px solid $gray_bg;
-                        }     
+                            position: absolute;
+                            left: 20px;
+                            bottom: 100%;
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 0 14px 8px 14px;
+                            border-color: transparent transparent $gray_bg transparent;
+                        }    
                         & .projects__title {
                             color: $brown;
                             font-size: 20px;
                             font-family: 'Raleway', sans-serif;
-                            font-weight: 500;    
+                            font-weight: 500;
+                            @include media(800) {
+                                font-size: 19px;
+                            }
                         }
                         & .projects__text {
                             color: #d1d1d1;
@@ -75,33 +116,17 @@
                         }
                     } 
                     &:hover {
-                        position: relative;
                         background-color: $dark_bg;
+                        position: relative;
                         opacity: 1;
-                        
                         .projects__img { 
                             opacity: 0.7;
-                            .projects__icon {
-                                position: absolute;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                top: 110px;
-                                left: 120px;
-                                & img {
-                                    padding-left: 20px;
-                                } 
-                            }
                         }
                         .projects__inner {
                             background-color: $dark_bg;
-                            &:after {
-                                content: '';
-                                position: relative;
-                                top: -100px;
-                                border: 17px solid transparent;
-                                border-bottom: 10px solid $dark_bg;
-                            }    
+                            &:before {
+                                border-color: transparent transparent $dark_bg transparent;
+                            }
                             .projects__title {
                                 color: #d1d1d1;
                             }
@@ -116,6 +141,7 @@
                 display: flex;
                 justify-content: center;
                 & a {
+                    position: absolute;
                     text-align: center;
                     font-size: 13px;
                     text-transform: uppercase;
@@ -124,13 +150,8 @@
                     border-radius: 7px;
                     background: $brown_bg;
                     box-shadow: 0px 3px 2px 0px rgba(115, 99, 87, 1);
-
-                }
-                 
-            }
-           
+                }   
+            }  
         }
-
     }
-
 }
