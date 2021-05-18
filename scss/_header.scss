@@ -2,31 +2,136 @@
     position: absolute;
     width: 100%;
     top: 40px;
-    left: 0px;
     right: 0;
+    left: 0;
     z-index: 15;
-    &-inner { 
-        display: flex; 
+    @include media(1020) {
+        background: #191919;
+    } 
+    &__container {
+        max-width: 1175px;
+        margin: 0 auto;
+        display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-}
-.navigation {
-	padding-left: 130px;
-	ul {
-		display: flex;
-	}
-	li {
-		padding-right: 27px;
-	}
-    &__link {
-	    color:$white;
-	    font-size: 16px;
-            &:hover {
-	            color:$brown;
+        padding: 0 15px;
+        @include media(1020) {
+            padding: 10px 15px;
+            .logo {
+                display: none;
             }
+        }
+        @include media(2560) {
+            @media only screen and (min-width: 1020px)  and (max-width: 2560px) {
+               .header__logo {
+                   display: none;
+                } 
+            }
+        }
+        @include media(600) {
+            padding: 0 5px;
+        } 
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 130px;
+            &__item {
+                padding-right: 27px;
+                color:$white;
+	            font-size: 16px;
+                font-family: 'Montserrat',Arial,sans-serif;
+                &:hover {
+	                color:$brown;
+                }
+            }
+            @include media(1160) {
+                padding-left: 30px;
+                &__item {
+                    padding-right: 20px;
+                }
+            } 
+        }
+    }
+    .mobile-button {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .mobile-button span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background: $white;
+        z-index: 5;
+        opacity: 1;
+        transition: .3s;
+    }                
+    .mobile-button:before,
+    .mobile-button:after {
+        content: "";
+        height: 4px;
+        width: 100%;
+        background: $white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: .3s;
+    }
+    .mobile-button:after {
+        top: auto;
+        bottom: 0;
+    }                
+    .mobile-button.opened span {
+        opacity: 0;
+    }
+    .mobile-button.opened:before {
+        transform: rotate(45deg);
+        top: calc(50% - 2px);
+    }
+    .mobile-button.opened:after {
+        transform: rotate(-45deg);
+        bottom: calc(50% - 2px);
+    }
+    @include media(1020) {
+        .mobile-button {
+            display: inline-flex;
+        }
+        .navigation {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            height: auto;
+            background: #191919;
+            z-index: 20;
+            padding: 15px;
+            &__item {
+                padding: 5px;
+                color: $gray_bg;
+                font-weight: 500;
+                height: 40px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+        }
     }
 }
+@include media(1020) {
+    @media only screen and (min-width: 200px)  and (max-width: 1020px) {
+       .header__logo {
+           display: block;
+        } 
+    }
+} 
 .search {
     display: flex;
     flex-flow: row nowrap;
@@ -34,3 +139,138 @@
         padding: 0 10px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .header {
+//     position: absolute;
+//     width: 100%;
+//     top: 40px;
+//     left: 0px;
+//     right: 0;
+//     z-index: 15;
+//     &-inner { 
+//         display: flex; 
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+// }
+// .navigation {
+//     .mobile-button {
+//         position: relative;
+//         width: 32px;
+//         height: 32px;
+//         display: none;
+//         align-items: center;
+//         justify-content: center;
+//         cursor: pointer;
+//         z-index: 20;
+//     }
+//     .mobile-button span {
+//         display: block;
+//         height: 4px;
+//         width: 100%;
+//         background: #00c0ff;
+//         z-index: 5;
+//         opacity: 1;
+//         transition: .3s;
+//     }
+//     .mobile-button:before,
+//     .mobile-button:after {
+//         content: "";
+//         height: 4px;
+//         width: 100%;
+//         background: #00c0ff;
+//         position: absolute;
+//         left: 0;
+//         top: 0;
+//         transition: .3s;
+//     }
+//     .mobile-button:after {
+//         top: auto;
+//         bottom: 0;
+//     }
+//     .mobile-button.opened span {
+//         opacity: 0;
+//     }
+//     .mobile-button.opened:before {
+//         top: calc(50% - 2px);
+//     }
+//     .mobile-button.opened:after {
+//         bottom: calc(50% - 2px);
+//     }
+//     @include media(600) {
+//         .mobile-button {
+//             display: inline-flex;
+//         }
+//         .navigation {
+//             display: none;
+//             position: absolute;
+//             left: 0;
+//             top: 100%;
+//             width: 100%;
+//             height: auto;
+//             text-align: center;
+//             background: #000;
+//             z-index: 20;
+//         }
+//     }
+// 	
+// 	ul {
+// 		display: flex;
+// 	}
+// 	li {
+// 		padding-right: 27px;
+//         a {
+//             display: block;
+//         }
+// 	}
+//     &__link {
+// 	    color:$white;
+// 	    font-size: 16px;
+//             &:hover {
+// 	            color:$brown;
+//             }
+//     }
+// }
+// .search {
+//     display: flex;
+//     flex-flow: row nowrap;
+//     &__icon {
+//         padding: 0 10px;
+//     }
+// }

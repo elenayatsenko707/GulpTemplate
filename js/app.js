@@ -1,3 +1,11 @@
+$(document).ready(function(){
+    $(".mobile-button").on("click",function(){
+        $(".navigation").slideToggle();
+        $(this).toggleClass("opened");
+    });
+});
+
+
 $(document).ready(function() {
 
     const swiper = new Swiper('.main-slider', {

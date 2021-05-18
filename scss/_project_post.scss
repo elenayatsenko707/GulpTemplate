@@ -2,6 +2,10 @@
     & .title-30 {
         padding-top: 70px;
         margin: 0 0 20px;
+        @include media(800) {
+           padding-top: 20px;
+           margin: 0 0 10px;
+        }
     }
     & .text {
         font-size: 14px;
@@ -13,6 +17,13 @@
             flex-wrap: wrap;
             justify-content: space-between; 
             margin-bottom: 40px;
+           
+            @include media(600) {
+                flex-grow: 1;
+                width: 100%;
+                margin: 0 auto; 
+                    
+            }
             & .post__item {
                 width: calc(33.3% - 30px);
                 flex-shrink: 0;
@@ -20,6 +31,7 @@
                 max-height: 400px;
                 margin-bottom: 40px;
                 position: relative;
+               
                 & .post__img {
                     & img {
                         max-width: 370px;
