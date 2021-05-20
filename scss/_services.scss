@@ -24,7 +24,7 @@
         margin: 0 0 15px;
         transition: .3s;
         @include media(1020) { 
-            font-size: 18px;
+            font-size: 16px;
         }
     }
     &__text {
@@ -64,11 +64,11 @@
                 }
             }
         }
-        @include media(800) { 
+        @include media(720) { 
             width: calc(80% - 15px);
         }
     }
-    @include media(800) {
+    @include media(720) {
         padding: 26px 0 40px;
         .row {
            flex-direction: column; 

@@ -14,7 +14,6 @@
             @include media(480) {
                 flex-direction: column;
             }
-           
             & li {
                 font-size: 17px;
                 cursor: pointer;
@@ -75,7 +74,7 @@
                     @include media(480) {
                         width: 100%;
                     }
-                    & .projects__img img{
+                    & .projects__img img {
                         max-width: 370px;
                         max-height: 240px;
                         width: 100%;  
@@ -110,7 +109,7 @@
                             }
                         }
                         & .projects__text {
-                            color: #d1d1d1;
+                            color: $grey_br;
                             font-size: 16px;
                             font-family: 'Montserrat', sans-serif;
                         }
@@ -128,7 +127,7 @@
                                 border-color: transparent transparent $dark_bg transparent;
                             }
                             .projects__title {
-                                color: #d1d1d1;
+                                color: $grey_br;
                             }
                             .projects__text {
                                 color: $brown;
