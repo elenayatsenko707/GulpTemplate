@@ -12,18 +12,17 @@
         line-height: 24px;  
     }
     .slider__post {
+        margin-bottom: 20px;
         & .row {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between; 
-            margin-bottom: 40px;
-           
-            @include media(600) {
-                flex-grow: 1;
-                width: 100%;
-                margin: 0 auto; 
-                    
-            }
+            justify-content: space-between;
+            @include media(800) {
+               margin-bottom: 30px; 
+            }  
+            @include media(480) {
+                justify-content: center;
+            }  
             & .post__item {
                 width: calc(33.3% - 30px);
                 flex-shrink: 0;
@@ -31,7 +30,14 @@
                 max-height: 400px;
                 margin-bottom: 40px;
                 position: relative;
-               
+                @include media(800) {
+                    width: calc(36.3% - 30px);
+                    margin: 0;
+                } 
+                @include media(480) {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
                 & .post__img {
                     & img {
                         max-width: 370px;
@@ -47,33 +53,38 @@
                         & h6 {
                             font-size: 24px;
                             padding: 3px 10px 7px;   
-                            background: #363636;
+                            background: $black_dt;
                             border-radius: 7px 7px 0px 0px;
                         }
                         & p {
                             font-size: 11px;
                             padding: 7px 10px 5px;
-                            background: #252525;
+                            background: $dark_dt;
                             border-radius: 0px 0px 7px 7px;
                             text-align: center;
                         }
                     } 
                 }       
                 & .post__inner {
-                    padding: 30px 30px 20px;
+                    padding: 20px 10px 20px;
                     & .post__title {
                         color: $dark;
                         font-size: 20px;
                         font-family: 'Raleway';
                         font-weight: 500;
-                        padding-bottom: 20px;    
+                        padding-bottom: 20px; 
+                        @include media(800) {
+                            padding-bottom: 10px;
+                        }   
                     }
                     & .post__text {
                         color: $font_color;
                         font-size: 16px;
                         font-family: 'Montserrat';
-                        padding-bottom: 30px; 
-                        width: 330px;
+                        padding-bottom: 30px;
+                        @include media(800) {
+                           padding-bottom: 10px;
+                        }
                     }
                     & .button {
                         color: $brown;
@@ -118,32 +129,48 @@
                         }
                     }   
                 }
-            }   
+            } 
+        }
+        .button__arrow {
+            display: flex;
+            justify-content: center;
+            @include media(600) {
+                margin-top: 40px;
+            }
+            @include media(480) {
+                margin: 0;
+            }
         }
         .slider__prev {
-            top: 95%;
-            left: 590px;
-            border: 2px solid #d1d1d1;
+            border: 2px solid $grey_br;
             border-radius: 50%;
             width: 30px;
             height: 30px;
+            position: static;
+            margin: 20px 10px;
+            @include media(480) {
+                margin: 0 10px;
+            }
             &:hover {
                 border: 2px solid $brown;
                 color: $brown;
             }
         }
         .slider__next {
-            top: 95%;
-            right: 540px;
-            border: 2px solid #d1d1d1;
+            border: 2px solid $grey_br;
             border-radius: 50%;
             width: 30px;
             height: 30px;
-            &:hover {
-                color: $brown;
-                border: 2px solid $brown;  
+            position: static;
+            margin: 20px 10px;
+            @include media(480) {
+                margin: 0 10px;
             }
-        }
+            &:hover {
+                border: 2px solid $brown;
+                color: $brown;
+            }
+        }  
         .swiper-button-next::after,
         .swiper-button-prev::after {
             font-size: 11px;

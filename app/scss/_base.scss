@@ -38,7 +38,6 @@ table {
     justify-content: space-between;
 }
 .col {
-
     &--25 {
         width: calc(25% - 15px);
         flex-shrink: 0;
@@ -53,6 +52,10 @@ table {
     @include media(480) { 
         margin: 0;
     }
+    @include media(900) { 
+        font-size: 20px;
+    }
+    
 }
 .title-30 {
     font-size: 30px;
@@ -87,7 +90,7 @@ table {
         text-align: left;
         max-width: 670px;
     }
-    @include media(720){
+    @include media(720) {
       margin: 0 auto 15px;  
     } 
 }
