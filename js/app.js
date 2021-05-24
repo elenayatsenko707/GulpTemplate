@@ -4,8 +4,6 @@ $(document).ready(function(){
         $(this).toggleClass("opened");
     });
 });
-
-
 $(document).ready(function() {
 
     const swiper = new Swiper('.main-slider', {
